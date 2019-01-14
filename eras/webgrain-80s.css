@@ -1,0 +1,34 @@
+:-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):focus {
+  outline: medium solid rgb(50,50,50);
+}
+
+:-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):active {
+  border-style: inset;
+}
+
+fieldset {
+  border-style: outset;
+}
+
+fieldset, fieldset legend, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  border: medium outset;
+  background-color: lightgrey;
+  font-family: system-ui;
+  font-size: 1rem;
+  background-color: lightgrey;
+  font-family: system-ui;
+  padding: 0.2em;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  font-weight: bold;
+  min-width: 8em;
+  font-size: 0.85em;
+}
+
+fieldset legend {
+  border: medium outset;
+  padding: 0.2em 0.5em;
+}
+
+

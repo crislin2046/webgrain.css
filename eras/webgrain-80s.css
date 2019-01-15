@@ -1,3 +1,28 @@
+:root {
+  font-family: sans-serif;
+}
+::selection {
+  background-color: silver;
+}
+:focus::selection {
+  background-color: dodgerblue;
+  color: white;
+}
+input, textarea {
+  border: medium inset;
+  padding: 0.35em 0.2em;
+  font-size: 1em;
+  outline: none;
+}
+
+label:focus-within, label:focus, a:focus {
+  outline: thin dotted;
+}
+
+input {
+  font-weight: bold;
+}
+
 :-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):focus {
   outline: medium solid rgb(50,50,50);
 }
@@ -30,5 +55,6 @@ fieldset legend {
   border: medium outset;
   padding: 0.2em 0.5em;
 }
+
 
 

@@ -1,97 +1,122 @@
-:root {
-  font-family: sans-serif;
-}
-::selection {
-  background-color: silver;
-}
-:focus::selection {
-  background-color: dodgerblue;
-  color: white;
-}
-input, textarea {
-  border: medium inset;
-  padding: 0.35em 0.2em;
-  font-size: 1em;
-  outline: none;
-}
+  :root {
+    font-family: sans-serif;
+    font-size: 16px;
+    --thin: 0.1em;
+    --medium: 0.2em;
+  }
+  ::selection {
+    background-color: silver;
+  }
+  :focus::selection {
+    background-color: dodgerblue;
+    color: white;
+  }
+  input, textarea {
+    border: var(--medium) inset silver;
+    padding: 0.35em 0.2em;
+    font-size: 1em;
+    outline: none;
+  }
 
-label {
-  display: grid;
-  grid-template-areas:
-    "label input";
-  grid-template-columns: 100px 1fr;
-}
+  input, textarea, select, button {
+    padding: 0.2em;
+    margin: 0.2em;
+  }
 
-label > * {
-  grid-area: input;
-}
+  input[type="checkbox"], input[type="radio"] {
+    max-width: 1em;
+  }
 
+  label {
+    display: grid;
+    grid-template-areas:
+      "label input";
+    grid-template-columns: 100px 1fr;
+  }
 
-label:focus-within, label:focus, a:focus {
-  outline: thin dotted;
-}
-
-input {
-  font-weight: bold;
-}
-
-[disabled] {
-  background: silver;
-}
-
-:-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):focus {
-  outline: medium solid rgb(50,50,50);
-}
-
-:-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):active {
-  border-style: inset;
-}
-
-fieldset {
-  position: relative;
-  border-style: outset;
-  box-sizing: border-box;
-  margin-top: 1em;
-}
-
-fieldset, fieldset legend, button, input[type="button"], input[type="reset"], input[type="submit"] {
-  border: medium outset;
-  background-color: lightgrey;
-  font-family: system-ui;
-  font-size: 1rem;
-  background-color: lightgrey;
-  font-family: system-ui;
-  padding: 0.2em;
-}
+  label > * {
+    grid-area: input;
+  }
 
 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-  font-weight: bold;
-  min-width: 8em;
-  font-size: 0.85em;
-}
+  label:focus-within, label:focus, a:focus {
+    outline: var(--thin) dotted;
+  }
 
-fieldset legend {
-  border: medium outset;
-  padding: 0.2em 0.5em;
-}
+  input {
+    font-weight: bold;
+  }
 
-legend.full-width {
-  left: -0.25em;
-  position: relative;
-  width: 100%;
-  background: dodgerblue;
-  padding: 0.2em;
-  color: white;
-  font-weight: bold;
-}
+  [disabled] {
+    background: silver;
+  }
 
-form {
-  display: table;
-  min-width: 40%;
-}
+  :-moz-any(button, input[type="button"], input[type="reset"], input[type="submit"]):focus {
+    outline: var(--medium) solid grey;
+  }
+  :-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):focus {
+    outline: var(--medium) solid grey;
+  }
 
-fieldset p {
-  padding: 0 3em 0 2em;
-}
+  :-moz-any(button, input[type="button"], input[type="reset"], input[type="submit"]):active {
+    border-style: inset;
+    border-color: silver;
+  }
+  :-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):active {
+    border-style: inset;
+    border-color: silver;
+  }
+
+  fieldset {
+    position: relative;
+    border-style: outset;
+    border-color: silver;
+    box-sizing: border-box;
+    margin-top: 1em;
+  }
+
+  fieldset, fieldset legend, button, input[type="button"], input[type="reset"], input[type="submit"] {
+    border: var(--medium) outset silver;
+    background-color: lightgrey;
+    font-size: 1rem;
+    background-color: lightgrey;
+    padding: 0.2em;
+  }
+
+
+  input[type="range"] {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  button, input[type="button"], input[type="reset"], input[type="submit"] {
+    font-weight: bold;
+    min-width: 8em;
+    font-size: 0.85em;
+  }
+
+  fieldset legend {
+    border: var(--medium) outset silver;
+    padding: 0.2em 0.5em;
+  }
+
+  legend.full-width {
+    left: calc(-1 * var(--medium) - 0.2em);
+    position: relative;
+    width: 100%;
+    background: dodgerblue;
+    padding: 0.2em;
+    color: white;
+    font-weight: bold;
+  }
+
+  form {
+    display: table;
+    min-width: 40%;
+  }
+
+  fieldset p {
+    padding: 0 3em 0 2em;
+  }
 

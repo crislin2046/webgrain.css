@@ -1,61 +1,14 @@
+@font-face {
+  font-family: pixel;
+  src: url(https://fonts.googleapis.com/css?family=Press+Start+2P); 
+}
+
 :root {
-  font-family: sans-serif;
-  font-size: 16px;
+  --black: #212529;
+  --white: white;
+  --blue: #209cee;
+  --yellow: #f7d51d;
+  --red: #e76e55;
+  --grey: #d3d3d3;
+  --green: #92cc41;
 }
-::selection {
-  background-color: silver;
-}
-:focus::selection {
-  background-color: dodgerblue;
-  color: white;
-}
-input, textarea {
-  border: medium inset;
-  padding: 0.35em 0.2em;
-  font-size: 1em;
-  outline: none;
-}
-
-label:focus-within, label:focus, a:focus {
-  outline: thin dotted;
-}
-
-input {
-  font-weight: bold;
-}
-
-:-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):focus {
-  outline: medium solid rgb(50,50,50);
-}
-
-:-webkit-any(button, input[type="button"], input[type="reset"], input[type="submit"]):active {
-  border-style: inset;
-}
-
-fieldset {
-  border-style: outset;
-}
-
-fieldset, fieldset legend, button, input[type="button"], input[type="reset"], input[type="submit"] {
-  border: medium outset;
-  background-color: lightgrey;
-  font-family: system-ui;
-  font-size: 1rem;
-  background-color: lightgrey;
-  font-family: system-ui;
-  padding: 0.2em;
-}
-
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-  font-weight: bold;
-  min-width: 8em;
-  font-size: 0.85em;
-}
-
-fieldset legend {
-  border: medium outset;
-  padding: 0.2em 0.5em;
-}
-
-
-

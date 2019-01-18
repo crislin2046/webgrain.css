@@ -3,12 +3,14 @@
     font-size: 16px;
     --thin: 0.1em;
     --medium: 0.2em;
+    --teal: #017b7b;
+    --midnightblue: #010d7c;
   }
   ::selection {
     background-color: silver;
   }
   :focus::selection {
-    background-color: dodgerblue;
+    background-color: var(--midnightblue);
     color: white;
   }
   input, textarea {
@@ -105,7 +107,7 @@
     left: calc(-1 * var(--medium) - 0.2em);
     position: relative;
     width: 100%;
-    background: dodgerblue;
+    background: var(--midnightblue);
     padding: 0.2em;
     color: white;
     font-weight: bold;
@@ -120,3 +122,15 @@
     padding: 0 3em 0 2em;
   }
 
+  hr {
+    border-width: medium;
+  }
+
+  p, article, main, div, nav {
+    background: lightgrey;
+    padding: 0.2em;
+  }
+
+  :root, body {
+    background: var(--teal);
+  }

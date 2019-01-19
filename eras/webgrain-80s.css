@@ -17,6 +17,11 @@
     font-family: var(--pixel);
   }
 
+  ::selection {
+    background-color: var(--blue);
+    color: white;
+  }
+
   button {
     position: relative;
     display: inline-block;

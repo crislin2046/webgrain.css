@@ -1,0 +1,48 @@
+:root {
+  font-family: sans-serif;
+  font-size: 10pt;
+  color: black;
+  --primary: black;
+  --inverted: white;
+}
+a:visited, a:hover, a:link {
+  color: inherit;
+}
+  
+fieldset, article, body, main {
+  display: table;
+}
+fieldset, hr, article {
+  border: thin solid;
+  margin: 0.25em;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+  margin-top: 0;
+  background: var(--primary);
+  color: var(--inverted);
+}
+
+legend {
+  padding: 0.125em 0.5em;
+  left: -0.5em;
+  position: relative;
+  box-shadow: 0.5em 0 black;
+
+}
+
+button, input {
+  font: inherit;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  box-shadow: 0.125em 0.125em 0.125em grey;
+}
+
+button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+  box-shadow: 0.05em 0.05em 0.125em grey;
+}
+
+ul, ol {
+  list-style-type: square;
+}

@@ -1,0 +1,128 @@
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.tight {
+  display: table;
+}
+
+.app {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  ;
+  grid-template-rows: 2em 1fr 2em;
+  grid-template-columns: auto 1fr auto;
+}
+
+.app aside {
+  grid-area: aside;
+}
+
+.app nav {
+  grid-area: nav;
+}
+
+.app footer {
+  grid-area: footer;
+}
+
+.app header {
+  grid-area: header;
+}
+
+.app .main {
+  grid-area: main;
+}
+
+.app, .app * {
+  border: 1px solid lime;
+}
+
+.with-overlay {
+  position:relative;
+  z-index: 1;
+}
+
+.with-overlay .overlay {
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
+
+.with-overlay .center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.with-overlay .top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.with-overlay .left {
+  top: 50%;
+  left: 0;
+  transform: translate(0,-50%);
+}
+
+.with-overlay .left.top {
+  left: 0; top: 0;
+  transform: none;
+}
+
+.with-overlay .right.top {
+  left: unset;
+  right: 0; top: 0;
+  transform: none;
+}
+
+.with-overlay .bottom {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,0);
+}
+
+.with-overlay .bottom.right {
+  left: unset;
+  top: unset;
+  right: 0; bottom: 0;
+  transform: none;
+}
+
+.with-overlay .bottom.left {
+  left: 0;
+  top: unset;
+  right: unset; bottom: 0;
+  transform: none;
+}
+
+.with-overlay .right {
+  top: 50%;
+  right: 0;
+  transform: translate(0,-50%);
+}
+
+.vertical-scroll {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.horizontal-scroll {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.with-overlay, .with-overlay * {
+  border: 1px solid lime;
+}
+

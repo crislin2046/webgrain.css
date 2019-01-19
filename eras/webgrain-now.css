@@ -1,0 +1,52 @@
+:root {
+  --black: #303030;
+  --white: #f8f8f8;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-size: 12pt;
+}
+
+button, fieldset, hr, input, select, textarea {
+  outline: none;
+  border: none;
+}
+
+button, input, textarea, fieldset, article, header, footer, main, body, :root, ul, ol, blockquote, nav, div, legend {
+  padding: 0;
+  margin: 0;
+}
+
+button, input, textarea {
+  padding: 0.5em;
+}
+
+button:active, input:active, textarea:active {
+  background: silver;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a:visited, a:link, a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong {
+  font-weight: 300;
+  font-variant: normal;
+  margin: 0.66em 0;
+}
+
+[disabled] {
+  opacity: 0.6;
+}
+
+p, div, article, form {
+  line-height: 135%;
+  margin: 0.66em 0;
+}
+
+

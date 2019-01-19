@@ -1,0 +1,59 @@
+:root {
+  --primary: dodgerblue;
+  --basic: black;
+  --highlight: lime;
+  --inverted: white;
+  font-family: Arial, sans-serif;
+  background: var(--primary);
+}
+
+body, fieldset,
+h1, h2, h3, h4, h5, h6,
+ol, ul,
+legend {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset, header, footer, main, article, 
+hr, blockquote, form, body,
+h1, h2, h3, h4, h5, h6, li {
+  border: none;
+  outline: thin solid var(--inverted);
+  display: table;
+}
+
+li {
+  outline-style: dotted;
+}
+
+button, a,
+input, select, textarea {
+  border: none;
+  outline: thin solid var(--inverted);
+  display: inline-table;
+  color: var(--inverted);
+}
+
+h1, h2, h3, h4, h5, h6, a, li {
+  color: var(--inverted);
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: serif;
+}
+
+li, a {
+  display: inline-block;
+  margin: 0.125em;
+  padding-right: 0.125em;
+  color: var(--highlight);
+}
+
+button, input, textarea {
+  background: transparent;
+}
+
+:focus {
+  outline-width: thick;
+}

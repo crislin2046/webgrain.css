@@ -1,0 +1,37 @@
+::selection {
+  color: dodgerblue;
+  background: white;
+}
+:root {
+  font-family: sans-serif;
+  font-size: 20pt;
+  line-height: 135%;
+  color: dodgerblue;
+  caret-color: dodgerblue;
+}
+
+body {
+  display: inline-block;
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: rgba(150,250,150,0.1);
+  display: inline;
+}
+
+a, input, button, textarea, label {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+label {
+  display: inline-block;
+}
+
+:focus {
+  background: lime;
+}

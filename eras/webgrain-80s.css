@@ -1,46 +1,128 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+  @import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 
-:root {
-  --pixel: 'Press Start 2P';
-  --black: #212529;
-  --white: white;
-  --blue: #209cee;
-  --yellow: #f7d51d;
-  --red: #e76e55;
-  --grey: #d3d3d3;
-  --green: #92cc41;
-}
+  :root {
+    --pixel: 'Press Start 2P';
+    --black: #212529;
+    --white: white;
+    --blue: #209cee;
+    --dblue: #006bb3;
+    --yellow: #f7d51d;
+    --dyellow: #e59400;
+    --red: #e76e55;
+    --dred: #8c2022;
+    --grey: #d3d3d3;
+    --dgrey: #adafbc;
+    --green: #92cc41;
+    --dgreen: #4aa52e;
+    font-family: var(--pixel);
+  }
 
-button {
-  position: relative;
-  display: inline-block;
-  font-family: var(--pixel);
-  color: var(--white);
-  background-color: var(--blue);
-  margin: 4px;
-  padding: 10px 12px;
-}
+  button {
+    position: relative;
+    display: inline-block;
+    font-family: var(--pixel);
+    color: var(--black);
+    background-color: var(--white);
+    margin: 0.5em;
+    padding: 10px 12px;
+    border: 0;
+    box-shadow: inset -0.25em -0.25em var(--grey);
+  }
 
-button::after, 
-button::before {
-  position: absolute;
-  box-sizing: content-box;
-  width: 100%;
-  height: 100%;
-  content: "";
-  border-color: var(--black);
-  border-style: solid;
-  border-width: 4px;
-}
-button::after {
-  top: 0;
-  left: -4px;
-  border-top: 2px;
-  border-bottom: 2px;
-}
-button::before {
-  top: -4px;
-  left: 0;
-  border-right: 2px;
-  border-left: 2px;
-}
+  button:active {
+    box-shadow: inset 0.25em 0.25em var(--grey);
+  }
+
+
+  button.is-primary {
+    background-color: var(--blue);
+    box-shadow: inset -0.25em -0.25em var(--dblue);
+  }
+
+  button.is-primary:active {
+    box-shadow: inset 0.25em 0.25em var(--dblue);
+  }
+
+  button.is-success {
+    background-color: var(--green);
+    box-shadow: inset -0.25em -0.25em var(--dgreen);
+  }
+
+  button.is-success:active {
+    box-shadow: inset 0.25em 0.25em var(--dgreen);
+  }
+
+  button.is-warning {
+    background-color: var(--yellow);
+    box-shadow: inset -0.25em -0.25em var(--dyellow);
+  }
+
+  button.is-warning:active {
+    box-shadow: inset 0.25em 0.25em var(--dyellow);
+  }
+
+  button.is-error {
+    background-color: var(--red);
+    box-shadow: inset -0.25em -0.25em var(--dred);
+  }
+
+  button.is-error:active {
+    box-shadow: inset 0.25em 0.25em var(--dred);
+  }
+
+  button[disabled] {
+    background-color: var(--grey);
+    box-shadow: inset -0.25em -0.25em var(--dgrey);
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* we use fieldsets for all sorts of things, not just input */
+
+  fieldset {
+    border: 0.25em solid var(--black);
+    border-radius: 0.25em;
+  }
+
+  fieldset legend {
+    position: relative;
+    padding: 0.25em 0.5em;  
+    top: 0.5em;
+  }
+
+  button::after, 
+  button::before {
+    position: absolute;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    content: "";
+    border-color: var(--black);
+    border-style: solid;
+    border-width: 0.25em;
+  }
+  button::after {
+    top: 0;
+    left: -0.25em;
+    border-top: 2px;
+    border-bottom: 2px;
+  }
+  button::before {
+    top: -0.25em;
+    left: 0;
+    border-right: 2px;
+    border-left: 2px;
+  }
+
+  input, textarea {
+    box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529;
+    border: 0;
+    outline: 0;
+    padding: 0.5em 1em;
+    font-family: inherit;
+    margin: 0.5em;
+  }
+
+  hr {
+    border: 0.25em solid var(--black);
+  }
